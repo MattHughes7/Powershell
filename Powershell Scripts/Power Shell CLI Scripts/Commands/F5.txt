@@ -1,0 +1,76 @@
+--------------------------
+Cmdlets
+--------------------------
+
+# GLobal
+initialize-F5.iControl -Hostname <hostname> -Credentials <creds>
+get-F5.iControl
+get-F5.iControlCommands
+
+# Class
+* get-F5.Class -Type <Address|String|Value> -Name <class_name>
+* Create-Class -Type <Address|String|Value> -Name <class_name> -Members <member_list>
+* Remove-F5.Class -Type <Address|String|Value> -Name <class_name>
+* get-F5.ClassMember -Type <Address|String|Value> -Name <class_name> -Member <member_value>
+* Add-F5.ClassMember  -Type <Address|String|Value> -Name <class_name> -Member <member_value>
+* Remove-F5.ClassMember  -Type <Address|String|Value> -Name <class_name> -Member <member_value>
+
+# NodeAddress
+get-F5.LTMNodeAddress -Node <address>
+enable-F5.LTMNodeAddress -Node <address>
+disable-F5.LTMNodeAddress -Node <address>
+
+# Pool
+get-F5.LTMPool -Pool <pool_name>
+
+# PoolMember
+Add-F5.LTMPoolMember -Pool <pool_name> -Member <ip:port>
+Remove-F5.LTMPoolMember -Pool <pool_name> -Member <ip:port>
+get-F5.LTMPoolMember -Pool <pool_name> 
+enable-F5.LTMPoolMember -Pool <pool_name> -Member <ip:port>
+disable-F5.LTMPoolMember -Pool <pool_name> -Member <ip:port>
+move-F5.LTMPoolMember -Pool <pool1> -Member <ip:port> -Target <pool2> 
+
+# RamCache
+get-F5.RAMCacheEntries -ProfileName <profile_name> -Hostname <hostname> -Uri <url> -MaxResponses <max_responses>
+Remove-F5.RAMCacheEntries -ProfileName <profile_name> -Hostname <hostname> -Uri <url> 
+
+# Rule
+get-F5.LTMRule -Rule <rule_name>
+* Add-F5.LTMRule
+* Remove-F5.LTMRule
+
+# VirtualServer
+get-F5.LTMVirtualServer -VirtualServer <virtual_name>
+enable-F5.VirtualServer -VirtualServer <virtual_name>
+disable-F5.VirtualServer -VirtualServer <virtual_name>
+
+# DBVariable
+get-F5.DBVariable -Name <variable_name>
+set-F5.DBVariable -Name <variable_name> -Value <variable_value>
+
+# SystemInfo
+get-F5.SystemInformation
+get-F5.ProductInformation
+get-F5.SystemCPUUsage
+get-F5.SystemDiskUsage
+get-F5.SystemFanUsage
+get-F5.SystemMemoryUsage
+get-F5.SystemPowerUsage
+get-F5.SystemId
+get-F5.SystemTime
+get-F5.SystemTimeZone
+get-F5.SystemUptime
+
+# ConfigSync
+get-F5.ConfigurationList 
+load-F5.Configuration -Name <config_name> -Mode <High|Base>
+save-F5.Configuration -Name <config_name> -Mode <Full|High|Base>
+upload-F5.F5.Configuration -LocalFile <local_file> -Name <config_name>
+download-F5.F5.Configuration -Name <config_name> -LocalFile <local_file>
+Rollback-Configuration -Name <config_name>
+Remove-F5.Configuration -Name <config_name>
+upload-F5.F5.File -LocalFile <local_file> -RemoteFile <remote_file>
+download-F5.F5.File -RemoteFile <remote_file> -LocalFile <local_file>
+Remove-F5.File -RemoteFile <remote_file>
+

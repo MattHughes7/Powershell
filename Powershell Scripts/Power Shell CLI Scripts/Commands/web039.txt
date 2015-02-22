@@ -1,0 +1,17 @@
+172.21.17.5
+172.21.17.7
+172.21.17.242
+172.21.17.244
+172.21.17.246
+
+
+disable-F5.LTMPoolMember -Pool /Common/pool_127.2_T1Web39_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.39_WHRO_TEST_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.6_Bell_QA39_D2LSSL_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool.OUPDEV.OUPDEV.180.139.http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.22_UOW_TEST_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.46_WHRO_d2ltest.http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.55_ILEARNNYCSTAGING_ILEARNNYC_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.64_UNBTEST_UNBTEST_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool_127.65_BROWARDTEST_BROWARDTEST_http -Member 172.21.17.246:80
+disable-F5.LTMPoolMember -Pool /Common/pool.NLUTEST.NLU.180.145.http -Member 172.21.17.246:80
